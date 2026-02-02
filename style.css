@@ -137,3 +137,147 @@ footer {
     opacity: 0;
   }
 }
+
+.lock-screen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  text-align: center;
+}
+
+.lock-screen input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  width: 220px;
+}
+
+.lock-screen button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: #ff4d6d;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.end-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, #fff0f5, #ffb6c1);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+  text-align: center;
+}
+
+.score {
+  font-size: 4rem;
+  color: #ff4d6d;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Lock screen error animation */
+.lock-screen.shake {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+#lockMessage {
+  margin-top: 12px;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+#lockMessage.show {
+  opacity: 1;
+}
+
+input.error {
+  border: 2px solid #ff3b3b;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.final-verdict {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #fff1f8, #ffb3c6);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1000;
+  animation: fadeIn 1s ease forwards;
+}
+
+.final-verdict h1 {
+  font-size: 2rem;
+}
+
+.final-verdict h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.result {
+  margin: 20px 0;
+  font-size: 3rem;
+  color: #2ecc71;
+  animation: pulse 1.2s infinite;
+}
+
+.message {
+  max-width: 320px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.firework {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: gold;
+  border-radius: 50%;
+  animation: explode 1.8s ease-out forwards;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(6);
+    opacity: 0;
+  }
+}

@@ -6,7 +6,46 @@
     <title>Happy Birthday ❤️</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <div id="endScreen" class="end-screen">
+    <h1>💍 Compatibility Result</h1>
+    <h2>Tanisha ❤️ Dheeraj</h2>
+    <div class="score">100%</div>
+    <p>Certified Forever ♾️</p>
+  </div>
+  <div id="finalVerdict" class="final-verdict">
+    <h1>🎉 Assessment Result 🎉</h1>
+    <h2>Tanisha ❤️ Dheeraj</h2>
+    <div class="result">PASSED ✅</div>
+    <p class="message">
+      Congratulations Tanisha 😌<br/>
+      You have successfully completed the relationship assessment.<br/><br/>
+      <strong>You are now officially allowed to marry Dheeraj 💍❤️</strong>
+    </p>
+    <p style="margin-top:20px; font-size:0.9rem;">
+      Terms & Conditions: Unlimited love, lifetime commitment, daily hugs 💖
+    </p>
+    
+  </div>
+  
+  
   <body>
+    <div id="lockScreen" class="lock-screen">
+      <h1>🔒 Only for Tanisha 💖</h1>
+      <!-- <p>Enter the magic word</p>
+      <input type="password" id="secretInput" placeholder="Hint: your nickname 😉" />
+      <button onclick="unlock()">Unlock ❤️</button> -->
+      <p id="lockHint">Enter the magic word</p>
+<input type="password" id="secretInput" placeholder="Hint: your nickname 😉" />
+<button onclick="unlock()">Unlock ❤️</button>
+<div id="lockMessage"></div>
+
+    </div>
+    
+    <audio id="bgMusic" loop>
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    
     <!-- Hero Section -->
     <section class="hero">
       <h1>Happy Birthday, Tanisha ❤️</h1>
